@@ -38,7 +38,7 @@ router.get('/:id/edit', (req, res) => {
   return Todo.findOne({
     where: { id, UserId }
   })
-    .then(todo => res.render('edit', { todo: todo.toJSON() }))
+    .then(todo => res.render('edit', { todo: todo.toJSON() })) //todo.get()
     .catch(error => console.log(error))
 })
 
